@@ -28,7 +28,7 @@
                 $num = @mysqli_num_rows($result);
                 if($num>0){
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        echo '<tr><td align="left">' . $row['BookName'] . '</td><td align="left">' . $row['Quantity'] . 
+                        echo '<tr><td align="left"><a href="checkout.php?bookid='.$row['BookID'].'">' . $row['BookName'] . '</a></td><td align="left">' . $row['Quantity'] . 
                         '</td></tr>';
                     }
                 }
